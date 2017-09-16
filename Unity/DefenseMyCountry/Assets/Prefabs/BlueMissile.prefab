@@ -89,7 +89,7 @@ Transform:
   m_GameObject: {fileID: 1961006765755946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.077, y: 0, z: 1.104}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalScale: {x: 0.003, y: 0.003, z: 0.003}
   m_Children:
   - {fileID: 4311775420960568}
   - {fileID: 4936660700309764}
@@ -204,6 +204,7 @@ MonoBehaviour:
   fireDir: {x: 0, y: 1, z: 0}
   moveSpeed: 200
   kind: 0
+  lifeTime: 5
 --- !u!123 &123624409393500082
 LensFlare:
   m_ObjectHideFlags: 1

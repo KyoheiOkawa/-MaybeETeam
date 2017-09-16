@@ -27,7 +27,7 @@ public class TouchStart : MonoBehaviour {
 			else if (touch.phase == TouchPhase.Ended)
 			{
 				// タッチ終了
-                SceneManager.LoadScene("test");
+                SceneManager.LoadScene("OkawaTest");
 
 			}
 		}
@@ -47,7 +47,7 @@ public class TouchStart : MonoBehaviour {
 			else if (Input.GetMouseButtonUp(0))
 			{
 				// タッチ終了
-                SceneManager.LoadScene("test");
+                SceneManager.LoadScene("OkawaTest");
 			}
 		}
 

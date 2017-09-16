@@ -28,7 +28,7 @@ public class GameLogic : MonoBehaviour {
 		scoreText.text = "Score : " + this.score.ToString("D4") + "\nFailed : " + this.failureCount;
 	}
 
-	void addScore () {
+	public void addScore () {
 		this.score += 10;
 	}
 

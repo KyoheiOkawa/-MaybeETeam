@@ -39,6 +39,9 @@ public class Missile : MonoBehaviour {
 
 	Rigidbody rig;
 
+	[SerializeField]
+	float lifeTime = 5.0f;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -46,6 +49,8 @@ public class Missile : MonoBehaviour {
 
 		rig = GetComponent<Rigidbody> ();
 		rig.AddForce (fireDir * moveSpeed);
+
+		Destroy (this.gameObject, lifeTime);
 	}
 	
 	// Update is called once per frame
@@ -62,6 +67,9 @@ public class Missile : MonoBehaviour {
 
 			if (kind == Kind.Own && missile.KindKind == Kind.Enemy) {
 				Destroy (col.gameObject);
+				Destroy (this.gameObject);
+
+				GameObject.FindObjectOfType<GameLogic> ().addScore ();
 			}
 		}
 	}
