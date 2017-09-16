@@ -20,7 +20,8 @@ public class MissileGenerator : MonoBehaviour
 	{
 		while (true)
 		{
-			GameObject obj = Instantiate (missile, gameObject.transform);
+			GameObject obj = Instantiate (missile, transform.position,Quaternion.identity);
+			obj.GetComponent<Missile> ().FireDir = new Vector3(0,0.5f,0.5f);
 
 			yield return new WaitForSeconds (fireInterval);
 		}
