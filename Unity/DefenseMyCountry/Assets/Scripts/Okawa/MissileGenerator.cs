@@ -21,7 +21,13 @@ public class MissileGenerator : MonoBehaviour
 		while (true)
 		{
 			GameObject obj = Instantiate (missile, transform.position,Quaternion.identity);
-			obj.GetComponent<Missile> ().FireDir = new Vector3(0,0.5f,0.5f);
+			float random = Random.Range (0.2f, 0.6f);
+
+			int witch = 1;
+			if ((int)Random.Range (0, 100) >= 50)
+				witch *= -1;
+
+			obj.GetComponent<Missile> ().FireDir = new Vector3(0,(1.0f-random),random);
 
 			yield return new WaitForSeconds (fireInterval);
 		}

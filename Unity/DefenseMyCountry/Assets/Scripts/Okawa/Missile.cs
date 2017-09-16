@@ -70,6 +70,9 @@ public class Missile : MonoBehaviour {
 				Destroy (this.gameObject);
 
 				GameObject.FindObjectOfType<GameLogic> ().addScore ();
+
+				var effect = Instantiate (Resources.Load ("Explosion"), transform.position, Quaternion.identity);
+				Destroy (effect, 5.0f);
 			}
 		}
 	}
