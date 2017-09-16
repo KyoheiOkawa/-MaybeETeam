@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
-
-	public const int CONST_GAME_OVER_COUNT = 3;
+	
 	private bool isGameOver = false;
 	private int score = 0;
 	private int failureCount = 0;
